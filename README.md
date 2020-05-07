@@ -8,6 +8,25 @@ CUED PhD thesis template
 [![License MIT](http://img.shields.io/badge/license-MIT-brightgreen.svg)](license.md)
 [![Version](http://img.shields.io/badge/version-2.2-brightgreen.svg)](https://github.com/kks32/phd-thesis-template/releases/latest)
 
+## Modifications by myself
+I modified and added some scripts to suit my usage.
+* The bibliography is no longer part of the main `thesis.pdf`, but is in a separate file called `references.tex`, which is then `\include`d into LaTeX.
+* `compile-thesis.sh` has been renamed to `compile.sh` for brevity.
+
+There are two new sh scripts I have added: `main-chapters.sh` and `main.sh`. These files are meant to be final steps when processing a thesis.
+
+My workflow is to be working on `thesis.tex` within Texstudio. The first line of that file is:
+
+```
+\documentclass[a4paper,12pt,times,numbered,print,index]{PhDThesisPSnPDF}
+```
+
+When Texstudio compiles `thesis.tex`, it generates the whole thesis.
+
+After the thesis is finalised, we may want to print out PDFs for individual chapters. For that, the line above must be commented out, then run `main-chapters.sh`. This makes use of some very hacky if statements to get working. I must admit this is very inelegant, but it serves my purpose since I do not necessarily have much time to invest into LaTeX. I will change this if I someday find a better solution. Current solutions are based on these [two](https://tex.stackexchange.com/questions/31334/how-to-create-individual-chapter-pdfs-from-included-texs) [links](https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document).
+
+Finally, uncomment that line again, and run `main.sh`, which recompiles the final thesis, and removes a lot of residual files left by LaTeX.
+
 ## Author(s)
 *   Krishna Kumar
 
