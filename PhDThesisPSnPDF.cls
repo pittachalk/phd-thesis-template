@@ -818,6 +818,10 @@ wish to left align your text}
 \newcommand{\@subtitle}{}
 \newcommand{\subtitle}[1]{\renewcommand{\@subtitle}{#1}}
 
+% Word count
+\newcommand{\@wordcount}{}
+\newcommand{\wordcount}[1]{\renewcommand{\@wordcount}{#1}}
+
 % The year and term the degree will be officially conferred
 \newcommand{\@degreedate}{\monthname[\the\month]\space\the\year}
 \newcommand{\degreedate}[1]{\renewcommand{\@degreedate}{#1}}
@@ -944,6 +948,9 @@ wish to left align your text}
 % Title
 {\usebox{\PHD@Title}} % subtitle is defined
 
+% Declare word count
+\vspace{.05\PHD@titlepagespacing}
+{\normalsize Word count: \@wordcount}
 
 % Crest
 
@@ -1153,8 +1160,8 @@ wish to left align your text}
     \ifthenelse{\equal{\@subtitle}{}}{
       % subtitle is not defined
     }{
-      \\
-      \centering \Large {\@subtitle}
+      \\ \vspace{0.5em}
+      \centering \large {\@subtitle}
     } % subtitle is defined
   \end{minipage}
 \end{lrbox}
@@ -1192,7 +1199,7 @@ wish to left align your text}
     }{
       \begin{center}
         \makebox[\widthof{supervisorrole} + \@supervisorlinewidth][c]{
-          \Large
+          \large
           \@supervisorrole \parbox[t]{\@supervisorlinewidth}{\@supervisor}
         }
       \end{center}
@@ -1210,7 +1217,7 @@ wish to left align your text}
     }{
       \begin{center}
         \makebox[\widthof{advisorrole} + \@advisorlinewidth][c]{
-          \Large
+          \large
           \@advisorrole \parbox[t]{\@advisorlinewidth}{\@advisor}
         }
       \end{center}
