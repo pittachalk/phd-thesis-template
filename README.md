@@ -23,7 +23,7 @@ My workflow is to be working on `thesis.tex` within Texstudio. The first line of
 
 When Texstudio compiles `thesis.tex`, it generates the whole thesis.
 
-After the thesis is finalised, we may want to print out PDFs for individual chapters. For that, the line above must be commented out, then run `main-chapters.sh`. This makes use of some very hacky if statements to get working. I must admit this is very inelegant, but it serves my purpose since I do not necessarily have much time to invest into LaTeX. I will change this if I someday find a better solution. Current solutions are based on these [two](https://tex.stackexchange.com/questions/31334/how-to-create-individual-chapter-pdfs-from-included-texs) [links](https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document).
+After the thesis is finalised, we may want to print out PDFs for individual chapters. For that, the line above must be commented out, then run `main-chapters.sh`. This makes use of some very hacky if statements to get working. I must admit this is extremely inelegant, but it serves my purpose since I do not necessarily have the time to invest into LaTeX. I will change this if I someday find a better solution. Current solutions are based on these [two](https://tex.stackexchange.com/questions/31334/how-to-create-individual-chapter-pdfs-from-included-texs) [links](https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document).
 
 Finally, uncomment that line again, and run `main.sh`, which recompiles the final thesis, and removes a lot of residual files left by LaTeX.
 
