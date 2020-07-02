@@ -702,6 +702,9 @@ supported!}
 % type” means exactly (in terms of millimetres baseline distance). The following
 % LaTeX setting has routinely been considered perfectly acceptable:
 
+% https://www.overleaf.com/learn/latex/Paragraph_formatting#Line_spacing
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.2em}
 \renewcommand\baselinestretch{1.2}
 
 % ******************************** Justification *******************************
@@ -1160,7 +1163,7 @@ wish to left align your text}
     \ifthenelse{\equal{\@subtitle}{}}{
       % subtitle is not defined
     }{
-      \\ \vspace{0.5em}
+      \\ \vspace{0.4em} 
       \centering \large {\@subtitle}
     } % subtitle is defined
   \end{minipage}
@@ -1186,7 +1189,7 @@ wish to left align your text}
 \begin{lrbox}{\PHD@author}
   \begin{minipage}[c]{\textwidth}
     \centering \Large \bfseries{\@author}
-      \vspace{0.5em}   
+      \vspace{0.25em}   
   \end{minipage}
 \end{lrbox}
 
@@ -1203,7 +1206,7 @@ wish to left align your text}
           \@supervisorrole \parbox[t]{\@supervisorlinewidth}{\@supervisor}
         }
       \end{center}
-      \vspace{0.5em}
+      \vspace{0.25em}
     } % supervisor is defined
   \end{minipage}
 \end{lrbox}
@@ -1221,7 +1224,7 @@ wish to left align your text}
           \@advisorrole \parbox[t]{\@advisorlinewidth}{\@advisor}
         }
       \end{center}
-      \vspace{0.5em}
+      \vspace{0.25em}
     } % advisor is defined
   \end{minipage}
 \end{lrbox}
@@ -1243,6 +1246,7 @@ wish to left align your text}
       \large \submissiontext \par
       \large \textit {\@degreetitle} \par
     \end{center}
+  \vspace{1em}
   \end{minipage}
 \end{lrbox}
 
